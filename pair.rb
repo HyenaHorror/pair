@@ -1,4 +1,4 @@
-def names(*names)
+def pairing(*names)
   array = *names
 
   if array.length % 2 != 0
@@ -11,3 +11,5 @@ def names(*names)
 
   return random_pairs
 end
+
+p pairing("red", "blue", "orange", "green")
