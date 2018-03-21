@@ -1,3 +1,15 @@
 <center>
 Pair list: <%=pair_list%><br>
+
+<form method="post" action="revise_pairs">
+  <br><input type="submit" value="Make new pairs">
+  <% counter = 0 %>
+  <% pair_list.each do |x| %>
+    <br><input type="checkbox" name="pair_x">
+
+    <%= pair_list[counter] %>
+    <% counter += 1%>
+  <% end %>
+
+</form>
 </center>
