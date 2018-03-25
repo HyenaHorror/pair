@@ -11,5 +11,3 @@ def pairing(*names)
 
   return random_pairs
 end
-
-p pairing("red", "blue", "orange", "green")

@@ -1,15 +1,17 @@
 <center>
 Pair list: <%=pair_list%><br>
 
-<form method="post" action="revise_pairs">
-  <br><input type="submit" value="Make new pairs">
-  <% counter = 0 %>
+<form method="post" action="reroll">
+  <%counter = 0%>
   <% pair_list.each do |x| %>
-    <br><input type="checkbox" name="pair_x">
-
-    <%= pair_list[counter] %>
+    <br><input type="checkbox" name="reroll[]" value="<%=counter.to_i%>"> Index [<%=counter.to_i%>]<%# Creates a new checkbox with the return value of counter. %>
+    <%= pair_list[counter] %> <%# pair_list[x] tries to convert Array into Integer. Why?  %>
     <% counter += 1%>
   <% end %>
+  <br><input type="submit" value="Make new pairs">
+</form>
 
+<form method="post" action="startover">
+<input type="submit" value="Start Over">
 </form>
 </center>
