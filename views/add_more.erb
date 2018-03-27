@@ -1,5 +1,5 @@
 <center>
-<%=name_list%>
+Current list of names:  <%=name_list.join(", ")%>
 <form method="post" action="add_name">
   Enter another name to add to list:<br>
   <input type="text" name="new_name" autofocus>

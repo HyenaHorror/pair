@@ -1,11 +1,12 @@
 <center>
-Pair list: <%=pair_list%><br>
+<!-- Pair list: <%=pair_list.to_s%><br> -->
+Here are your pairs:
 
 <form method="post" action="reroll">
   <%counter = 0%>
   <% pair_list.each do |x| %>
-    <br><input type="checkbox" name="reroll[]" value="<%=counter.to_i%>"> Index [<%=counter.to_i%>]<%# Creates a new checkbox with the return value of counter. %>
-    <%= pair_list[counter] %> <%# pair_list[x] tries to convert Array into Integer. Why?  %>
+    <br><input type="checkbox" name="reroll[]" value="<%=counter.to_i%>"> Pair <%=(counter + 1).to_i%>: <%# Creates a new checkbox with the return value of counter. %>
+    <%= pair_list[counter].join(", ") %> <%# pair_list[x] tries to convert Array into Integer. Why?  %>
     <% counter += 1%>
   <% end %>
   <br><input type="submit" value="Make new pairs">
