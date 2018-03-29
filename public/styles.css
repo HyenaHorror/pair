@@ -1,0 +1,23 @@
+html {
+    height: 50%;
+}
+body {
+    font-family: verdana;
+
+    height: 50%;
+    margin: 0;
+
+    background: linear-gradient(to bottom, #66ff66 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}

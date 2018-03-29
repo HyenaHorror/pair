@@ -20,7 +20,7 @@ get '/add_more' do
 end
 
 post '/make_pairs' do
-  pair_list = pairing(*session[:name_array]) # TODO: Revise this shitty section.
+  pair_list = pairing(*session[:name_array])
   session[:pair_list] = pair_list #Must set to session variable for next step.
   erb :display_pairs, locals: {pair_list:pair_list}
 end
@@ -44,6 +44,10 @@ post '/reroll' do
       session[:pair_list] << x
     end
   end
+  redirect '/rerolled'
+end
+
+get '/rerolled' do
   erb :display_pairs, locals: {pair_list:session[:pair_list]}
 end
 

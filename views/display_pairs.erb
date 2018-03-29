@@ -2,24 +2,21 @@
 <html>
 <head>
   <title>Display Pairs</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <center>
-<!-- Pair list: <%=pair_list.to_s%><br> -->
-Here are your pairs:
-
-<form method="post" action="reroll">
-  <%counter = 0%>
-  <% pair_list.each do |x| %>
-    <br><input type="checkbox" name="reroll[]" value="<%=counter.to_i%>"> Pair <%=(counter + 1).to_i%>: <%# Creates a new checkbox with the return value of counter. %>
-    <%= pair_list[counter].join(", ") %> <%# pair_list[x] tries to convert Array into Integer. Why?  %>
-    <% counter += 1%>
+<h3>Here are your pairs:</h3>
+<p><form method="post" action="reroll">
+  <% pair_list.each_with_index do |pair,i| %>
+    <input type="checkbox" name="reroll[]" value="<%=i.to_i%>"> Pair <%=(i + 1).to_i%>: <%# Creates a new checkbox with the return value of counter. %>
+    <%= pair.join(", ") %><br>
   <% end %>
-  <br><input type="submit" value="Make new pairs">
-</form>
+  <p><input type="submit" class="button" value="Reroll checkeds"></p>
+</form></p>
 
 <form method="post" action="startover">
-<br><input type="submit" value="Start Over">
+<input type="submit" class="button" value="Start Over">
 </form>
 </center>
 </body>

@@ -2,17 +2,18 @@
 <html>
 <head>
   <title>Add More Names</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <center>
-Current list of names:  <%=name_list.join(", ")%>
-<form method="post" action="add_name">
-  Enter another name to add to list:<br>
+<p>Current list of names:  <%=name_list.join(", ")%></p>
+<form method="post" action="add_name"></p>
+  Enter another name to add to list:<br><br>
   <input type="text" name="new_name" required="required" autofocus>
-  <input type="submit" value="Add">
-</form>
-<form method="post" action="make_pairs">
-  <br><input type="submit" value="Make pairs">
+  <input type="submit" class="button" value="Add">
+</form></p>
+<form method="post"  action="make_pairs">
+<input type="submit" class="button" value="Make pairs">
 </form>
 </center>
 </body>
