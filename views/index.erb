@@ -4,7 +4,7 @@
   <title>Team Pair Maker</title>
   <link rel="stylesheet"  href="styles.css">
 </head>
-<body>
+<body onload="load_box_on_start()">
 <center>
 
 <script>
@@ -18,15 +18,16 @@
 
     location.appendChild(input); // Adds input to location
   }
-
+  function load_box_on_start(){
+    for(x=1; x <= 4; x++){
+      new_textbox();
+    }
+  }
   function delete_last_textbox(){
     var location = document.getElementById("our_input"); //sets location to be id of our_input
     location.removeChild(location.lastChild); // removes child at location, last child of location
   }
 </script>
-
-<button class="button" onclick="new_textbox()">Add name</button>
-<button class="button" onclick="delete_last_textbox()">Delete last textbox</button>
 
 <form method="post" action="make_pairs">
   <p>Enter name to add to list:</p>
@@ -34,6 +35,8 @@
 
   <input type="submit" class="button" value="Submit">
 </form>
+<button class="button" onclick="new_textbox()">Add name</button>
+<button class="button" onclick="delete_last_textbox()">Delete last textbox</button>
 </center>
 </body>
 </html>
