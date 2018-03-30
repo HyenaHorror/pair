@@ -20,4 +20,12 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #367c39;
+    color: white;
 }

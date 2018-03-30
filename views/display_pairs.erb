@@ -6,15 +6,14 @@
 </head>
 <body>
 <center>
-<h3>Here are your pairs:</h3>
+<h4>Here are your pairs:</h4>
 <p><form method="post" action="reroll">
   <% pair_list.each_with_index do |pair,i| %>
     <input type="checkbox" name="reroll[]" value="<%=i.to_i%>"> Pair <%=(i + 1).to_i%>: <%# Creates a new checkbox with the return value of counter. %>
     <%= pair.join(", ") %><br>
   <% end %>
-  <p><input type="submit" class="button" value="Reroll checkeds"></p>
+  <p><input type="submit" class="button" value="Reroll Checked"></p>
 </form></p>
-
 <form method="post" action="startover">
 <input type="submit" class="button" value="Start Over">
 </form>

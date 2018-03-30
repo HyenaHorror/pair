@@ -6,10 +6,33 @@
 </head>
 <body>
 <center>
+
+<script>
+  function new_textbox(){
+    var input = document.createElement("input"); // Creates an input tag.
+    var location = document.getElementById("our_input");
+    input.type = "text";
+    input.required = true;
+    input.autofocus = true;
+    input.name = "new_name[]"; // Use the name in your own scripts for this.
+
+    location.appendChild(input); // Adds input to location
+  }
+
+  function delete_last_textbox(){
+    var location = document.getElementById("our_input"); //sets location to be id of our_input
+    location.removeChild(location.lastChild); // removes child at location, last child of location
+  }
+</script>
+
+<button class="button" onclick="new_textbox()">Add name</button>
+<button class="button" onclick="delete_last_textbox()">Delete last textbox</button>
+
 <form method="post" action="add_name">
   <p>Enter name to add to list:</p>
-  <input type="text" name="new_name" required="required" autofocus>
-  <input type="submit" class="button" value="Add">
+  <p id="our_input"></p>
+
+  <input type="submit" class="button" value="Submit">
 </form>
 </center>
 </body>
