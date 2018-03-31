@@ -6,7 +6,14 @@
 </head>
 <body onload="load_box_on_start()">
 <center>
-
+<style>
+input[type=text] {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    margin: 3px 3px;
+}
+</style>
 <script>
   function new_textbox(){
     var input = document.createElement("input"); // Creates an input tag.
@@ -28,15 +35,14 @@
     location.removeChild(location.lastChild); // removes child at location, last child of location
   }
 </script>
-
 <form method="post" action="make_pairs">
   <p>Enter name to add to list:</p>
   <p id="our_input"></p>
 
-  <input type="submit" class="button" value="Submit">
+  <input type="submit" class="button" value="Make Groups">
 </form>
-<button class="button" onclick="new_textbox()">Add name</button>
-<button class="button" onclick="delete_last_textbox()">Delete last textbox</button>
+<p><button class="button" onclick="new_textbox()">Add Name</button>
+<button class="button" onclick="delete_last_textbox()">Remove Last</button></p>
 </center>
 </body>
 </html>
