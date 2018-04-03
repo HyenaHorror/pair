@@ -4,13 +4,19 @@ html {
 body {
     font-family: verdana;
     color: white;
-    
+
     height: 50%;
     margin: 0;
 
     background: linear-gradient(to bottom, #66ff66 0%, #ffffff 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+input[type="text"] {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    margin: 3px 3px;
 }
 .button {
     background-color: #4CAF50;

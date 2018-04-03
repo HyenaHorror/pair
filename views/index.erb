@@ -6,35 +6,7 @@
 </head>
 <body onload="load_box_on_start()">
 <center>
-<style>
-input[type=text] {
-    background-color: #00b300;
-    color: white;
-    border: none;
-    margin: 3px 3px;
-}
-</style>
-<script>
-  function new_textbox(){
-    var input = document.createElement("input"); // Creates an input tag.
-    var location = document.getElementById("our_input");
-    input.type = "text";
-    input.required = true;
-    input.autofocus = true;
-    input.name = "new_name[]"; // Use the name in your own scripts for this.
-
-    location.appendChild(input); // Adds input to location
-  }
-  function load_box_on_start(){
-    for(x=1; x <= 4; x++){
-      new_textbox();
-    }
-  }
-  function delete_last_textbox(){
-    var location = document.getElementById("our_input"); //sets location to be id of our_input
-    location.removeChild(location.lastChild); // removes child at location, last child of location
-  }
-</script>
+<script src="scripts.js"></script>
 <form method="post" action="make_pairs">
   <p>Enter name to add to list:</p>
   <p id="our_input"></p>
