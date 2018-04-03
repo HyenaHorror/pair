@@ -10,8 +10,9 @@ end
 
 post '/make_pairs' do
   pair_list = Array.new
-  pair_list = pairing(*params[:new_name])
+  pair_list = pairing(params[:new_name])
   session[:pair_list] = pair_list #Must set to session variable for next step.
+  redirect '/display_pairs'
 end
 
 get '/display_pairs' do
@@ -31,7 +32,7 @@ post '/reroll' do
       session[:pair_list].delete_at(pair) #remove current iteration from original list
     end
 
-    reroll_pairs = pairing(*reroll_pairs.flatten) #Rerolls new pairs
+    reroll_pairs = pairing(reroll_pairs.flatten) #Rerolls new pairs
 
     reroll_pairs.each do |x|
       session[:pair_list] << x

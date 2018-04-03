@@ -1,6 +1,4 @@
-def pairing(*names)
-  array = *names
-
+def pairing(array)
   if array.length % 2 != 0
     random_pairs = array.shuffle.each_slice(2).to_a
     random_pairs[0] << random_pairs.last[0]
