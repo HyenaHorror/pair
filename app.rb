@@ -12,7 +12,10 @@ post '/make_pairs' do
   pair_list = Array.new
   pair_list = pairing(*params[:new_name])
   session[:pair_list] = pair_list #Must set to session variable for next step.
-  erb :display_pairs, locals: {pair_list:pair_list}
+end
+
+get '/display_pairs' do
+  erb :display_pairs, locals: {pair_list: session[:pair_list]}
 end
 
 post '/reroll' do
