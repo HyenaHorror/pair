@@ -8,10 +8,12 @@
 <center>
 <h4>Here are your pairs:</h4>
 <p><form method="post" action="reroll">
+  <table>
   <% pair_list.each_with_index do |pair,i| %>
-    <input type="checkbox" name="reroll[]" value="<%=i.to_i%>"> Pair <%=(i + 1).to_i%>: <%# Creates a new checkbox with the return value of counter. %>
-    <%= pair.join(", ") %><br>
+    <tr><td><input type="checkbox" name="reroll[]" value="<%=i.to_i%>"></td> <td>Pair <%=(i + 1).to_i%>:</td> <%# Creates a new checkbox with the return value of counter. %>
+    <td><%= pair.join(", ") %></td></tr>
   <% end %>
+  </table>
   <p><input type="submit" class="button" value="Reroll Checked"></p>
 </form></p>
 <form method="post" action="startover">
