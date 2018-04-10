@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Display Pairs</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <center>
-<h4>Here are your pairs:</h4>
+  <div class="content">
+<h2>Here are your Groups</h2>
 <p><form method="post" action="reroll">
   <table>
   <% pair_list.each_with_index do |pair,i| %>
@@ -18,7 +18,7 @@
 </form></p>
 <form method="post" action="startover">
 <input type="submit" class="button" value="Start Over">
-</form>
+</form></div>
 </center>
 </body>
 </html>

@@ -48,3 +48,15 @@ end
 post '/startover' do
   redirect '/'
 end
+
+get '/helloworld' do
+  erb :helloworld
+end
+
+get '/about' do
+  erb :about
+end
+
+get '/contact' do
+  erb :contact
+end
